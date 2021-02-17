@@ -11,6 +11,7 @@
     <modules>
         <module>baizhi-spring5-01</module>
         <module>baizhi-spring5-02</module>
+        <module>java-design-pattern</module>
     </modules>
 
 

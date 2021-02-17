@@ -10,7 +10,7 @@ public class ConnectionFactory {
         Connection conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/suns?useSSL=false", "root", "123456");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/suns?useSSL=false", "root", "zm123456");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

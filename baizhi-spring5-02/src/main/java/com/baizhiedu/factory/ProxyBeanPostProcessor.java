@@ -22,7 +22,7 @@ public class ProxyBeanPostProcessor implements BeanPostProcessor {
         InvocationHandler handler = new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                System.out.println("----- new Log-----");
+                //System.out.println("----- new Log-----");
                 Object ret = method.invoke(bean, args);
 
                 return ret;

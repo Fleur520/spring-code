@@ -29,7 +29,7 @@ public class TestJDKProxy {
         InvocationHandler handler = new InvocationHandler(){
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                System.out.println("------proxy  log --------");
+                System.out.println("------proxy jdk log --------");
                 //原始方法运行
                 Object ret = method.invoke(userService, args);
                 return ret;

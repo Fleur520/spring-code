@@ -95,7 +95,7 @@
 
 
     <bean id="customer" class="com.baizhiedu.basic.constructer.Customer">
-        <constructor-arg type="int">
+        <constructor-arg type="int" >
             <value>37</value>
         </constructor-arg>
     </bean>

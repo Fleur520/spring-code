@@ -5,8 +5,12 @@
       <list>
         <option value="$PROJECT_DIR$/baizhi-spring5-01/pom.xml" />
         <option value="$PROJECT_DIR$/baizhi-spring5-02/pom.xml" />
+        <option value="$PROJECT_DIR$/spring5-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/java-design-pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/java-design-pattern/spring_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/java-design-pattern/design_patterns/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="openjdk-15" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

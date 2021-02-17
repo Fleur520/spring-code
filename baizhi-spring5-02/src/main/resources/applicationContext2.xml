@@ -18,6 +18,8 @@
     -->
     <bean id="arround" class="com.baizhiedu.aspect.MyAspect"/>
 
-    <!--告知Spring基于注解进行AOP编程-->
+    <!--告知Spring基于注解进行AOP编程
+    proxy-target-class="true"  cglib
+    -->
     <aop:aspectj-autoproxy proxy-target-class="true" />
 </beans>

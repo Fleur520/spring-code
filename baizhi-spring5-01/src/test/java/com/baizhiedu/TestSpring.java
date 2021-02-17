@@ -83,11 +83,10 @@ public class TestSpring {
         */
 
         //获取的是 Spring工厂配置文件中所有bean标签的id值  person person1
-        /*String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
+        String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
             System.out.println("beanDefinitionName = " + beanDefinitionName);
         }
-        */
 
         //根据类型获得Spring配置文件中对应的id值
         /*String[] beanNamesForType = ctx.getBeanNamesForType(Person.class);
@@ -96,7 +95,8 @@ public class TestSpring {
         }
         */
 
-        //用于判断是否存在指定id值得bean,不能判断name值
+        // 用于判断是否存在指定id值得bean,不能判断name值
+        // 对象定义
         if (ctx.containsBeanDefinition("person")) {
             System.out.println("true = " + true);
         }else{
@@ -125,6 +125,7 @@ public class TestSpring {
        */
 
        String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
+
        for (String beanDefinitionName : beanDefinitionNames) {
            System.out.println("beanDefinitionName = " + beanDefinitionName);
        }

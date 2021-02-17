@@ -8,11 +8,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="baizhi-spring5-02" />
         <module name="baizhi-spring5-01" />
+        <module name="itheima_spring" />
+        <module name="spring5-annotation" />
+        <module name="design_patterns" />
+        <module name="spring-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="baizhi-spring5-01" target="1.8" />
       <module name="baizhi-spring5-02" target="1.8" />
+      <module name="design_patterns" target="1.8" />
+      <module name="itheima_spring" target="1.8" />
+      <module name="java-design-pattern" target="1.8" />
+      <module name="spring-code" target="8" />
+      <module name="spring-demo" target="1.8" />
+      <module name="spring5-annotation" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

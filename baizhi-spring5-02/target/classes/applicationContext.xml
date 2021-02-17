@@ -18,11 +18,11 @@
 
     <bean id="arround" class="com.baizhiedu.dynamic.Arround"/>
 
-    <aop:config proxy-target-class="true">
+    <aop:config proxy-target-class="false">
 <!--        所有的方法，都作为切入点，加入额外功能 login register-->
         <aop:pointcut id="pc" expression="execution(* login(..)) or execution(* register(..))"/>
         <!--组装：目的把切入点 与 额外功能进行 整合-->
-        <aop:advisor advice-ref="arround" pointcut-ref="pc"/>
+        <aop:advisor advice-ref="userService" pointcut-ref="pc"/>
     </aop:config>
 
 </beans>

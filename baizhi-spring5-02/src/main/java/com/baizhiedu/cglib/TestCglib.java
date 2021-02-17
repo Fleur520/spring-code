@@ -31,9 +31,9 @@ public class TestCglib {
             //等同于 InvocationHandler --- invoke
             @Override
             public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
-                System.out.println("---cglib log----");
+                System.out.println("---cglib start log----");
                 Object ret = method.invoke(userService, args);
-
+                System.out.println("---cglib end log----");
                 return ret;
             }
         };
