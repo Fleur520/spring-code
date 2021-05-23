@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="baizhi-spring5-02" />
         <module name="baizhi-spring5-01" />
+        <module name="training-project" />
+        <module name="dataStructures-algorithms" />
+        <module name="java-concurrency" />
         <module name="itheima_spring" />
-        <module name="spring5-annotation" />
+        <module name="java-base-common" />
         <module name="design_patterns" />
         <module name="spring-demo" />
       </profile>
@@ -17,12 +19,34 @@
     <bytecodeTargetLevel>
       <module name="baizhi-spring5-01" target="1.8" />
       <module name="baizhi-spring5-02" target="1.8" />
+      <module name="baizhi-spring5-03-annotation" target="1.8" />
+      <module name="dataStructures-algorithms" target="8" />
       <module name="design_patterns" target="1.8" />
-      <module name="itheima_spring" target="1.8" />
+      <module name="itheima_spring" target="8" />
+      <module name="java-base-common" target="8" />
+      <module name="java-concurrency" target="8" />
       <module name="java-design-pattern" target="1.8" />
+      <module name="java-project" target="1.8" />
       <module name="spring-code" target="8" />
-      <module name="spring-demo" target="1.8" />
+      <module name="spring-demo" target="8" />
       <module name="spring5-annotation" target="1.8" />
+      <module name="training-project" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="baizhi-spring5-01" options="-parameters" />
+      <module name="baizhi-spring5-02" options="-parameters" />
+      <module name="baizhi-spring5-03-annotation" options="-parameters" />
+      <module name="dataStructures-algorithms" options="-parameters" />
+      <module name="design_patterns" options="-parameters" />
+      <module name="itheima_spring" options="-parameters" />
+      <module name="java-base-common" options="-parameters" />
+      <module name="java-concurrency" options="-parameters" />
+      <module name="spring-code" options="-parameters" />
+      <module name="spring-demo" options="-parameters" />
+      <module name="spring5-annotation" options="" />
+      <module name="training-project" options="-parameters" />
+    </option>
   </component>
 </project>

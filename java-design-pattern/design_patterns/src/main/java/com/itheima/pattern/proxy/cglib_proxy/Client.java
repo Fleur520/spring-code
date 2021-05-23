@@ -1,11 +1,14 @@
+/*
 package com.itheima.pattern.proxy.cglib_proxy;
 
+*/
 /**
  * @version v1.0
  * @ClassName: Client
  * @Description: TODO(一句话描述该类的功能)
  * @Author: 黑马程序员
- */
+ *//*
+
 public class Client {
     public static void main(String[] args) {
         //创建代理工厂对象
@@ -16,3 +19,4 @@ public class Client {
         proxyObject.sell();
     }
 }
+*/

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zm.anno.aop.dao.SysUserDao">
+
+    <resultMap id="BaseResultMap" type="com.zm.anno.aop.entity.SysUser">
+        <!--@Table sys_user-->
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="username" column="username" jdbcType="VARCHAR"/>
+        <result property="realname" column="realname" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="salt" column="salt" jdbcType="VARCHAR"/>
+        <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+        <result property="birthday" column="birthday" jdbcType="TIMESTAMP"/>
+        <result property="sex" column="sex" jdbcType="OTHER"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="orgCode" column="org_code" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="OTHER"/>
+        <result property="delFlag" column="del_flag" jdbcType="OTHER"/>
+        <result property="thirdId" column="third_id" jdbcType="VARCHAR"/>
+        <result property="thirdType" column="third_type" jdbcType="VARCHAR"/>
+        <result property="activitiSync" column="activiti_sync" jdbcType="OTHER"/>
+        <result property="workNo" column="work_no" jdbcType="VARCHAR"/>
+        <result property="post" column="post" jdbcType="VARCHAR"/>
+        <result property="telephone" column="telephone" jdbcType="VARCHAR"/>
+        <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="userIdentity" column="user_identity" jdbcType="OTHER"/>
+        <result property="departIds" column="depart_ids" jdbcType="OTHER"/>
+        <result property="relTenantIds" column="rel_tenant_ids" jdbcType="VARCHAR"/>
+        <result property="clientId" column="client_id" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BaseResultMap">
+        select
+            id, username, realname, password, salt, avatar
+        from sys_user
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="BaseResultMap">
+        select
+            id, username, realname, password, salt, avatar, birthday, sex, email, phone, org_code, status, del_flag, third_id, third_type, activiti_sync, work_no, post, telephone, create_by, create_time, update_by, update_time, user_identity, depart_ids, rel_tenant_ids, client_id
+        from jeecg-boot.sys_user
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="BaseResultMap">
+        select
+        id, username, realname, password, salt, avatar, birthday, sex, email, phone, org_code, status, del_flag, third_id, third_type, activiti_sync, work_no, post, telephone, create_by, create_time, update_by, update_time, user_identity, depart_ids, rel_tenant_ids, client_id
+        from jeecg-boot.sys_user
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="username != null and username != ''">
+                and username = #{username}
+            </if>
+            <if test="realname != null and realname != ''">
+                and realname = #{realname}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+            <if test="salt != null and salt != ''">
+                and salt = #{salt}
+            </if>
+            <if test="avatar != null and avatar != ''">
+                and avatar = #{avatar}
+            </if>
+            <if test="birthday != null">
+                and birthday = #{birthday}
+            </if>
+            <if test="sex != null">
+                and sex = #{sex}
+            </if>
+            <if test="email != null and email != ''">
+                and email = #{email}
+            </if>
+            <if test="phone != null and phone != ''">
+                and phone = #{phone}
+            </if>
+            <if test="orgCode != null and orgCode != ''">
+                and org_code = #{orgCode}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="delFlag != null">
+                and del_flag = #{delFlag}
+            </if>
+            <if test="thirdId != null and thirdId != ''">
+                and third_id = #{thirdId}
+            </if>
+            <if test="thirdType != null and thirdType != ''">
+                and third_type = #{thirdType}
+            </if>
+            <if test="activitiSync != null">
+                and activiti_sync = #{activitiSync}
+            </if>
+            <if test="workNo != null and workNo != ''">
+                and work_no = #{workNo}
+            </if>
+            <if test="post != null and post != ''">
+                and post = #{post}
+            </if>
+            <if test="telephone != null and telephone != ''">
+                and telephone = #{telephone}
+            </if>
+            <if test="createBy != null and createBy != ''">
+                and create_by = #{createBy}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateBy != null and updateBy != ''">
+                and update_by = #{updateBy}
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+            <if test="userIdentity != null">
+                and user_identity = #{userIdentity}
+            </if>
+            <if test="departIds != null">
+                and depart_ids = #{departIds}
+            </if>
+            <if test="relTenantIds != null and relTenantIds != ''">
+                and rel_tenant_ids = #{relTenantIds}
+            </if>
+            <if test="clientId != null and clientId != ''">
+                and client_id = #{clientId}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into jeecg-boot.sys_user(username, realname, password, salt, avatar, birthday, sex, email, phone, org_code, status, del_flag, third_id, third_type, activiti_sync, work_no, post, telephone, create_by, create_time, update_by, update_time, user_identity, depart_ids, rel_tenant_ids, client_id)
+        values (#{username}, #{realname}, #{password}, #{salt}, #{avatar}, #{birthday}, #{sex}, #{email}, #{phone}, #{orgCode}, #{status}, #{delFlag}, #{thirdId}, #{thirdType}, #{activitiSync}, #{workNo}, #{post}, #{telephone}, #{createBy}, #{createTime}, #{updateBy}, #{updateTime}, #{userIdentity}, #{departIds}, #{relTenantIds}, #{clientId})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update jeecg-boot.sys_user
+        <set>
+            <if test="username != null and username != ''">
+                username = #{username},
+            </if>
+            <if test="realname != null and realname != ''">
+                realname = #{realname},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="salt != null and salt != ''">
+                salt = #{salt},
+            </if>
+            <if test="avatar != null and avatar != ''">
+                avatar = #{avatar},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email},
+            </if>
+            <if test="phone != null and phone != ''">
+                phone = #{phone},
+            </if>
+            <if test="orgCode != null and orgCode != ''">
+                org_code = #{orgCode},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="delFlag != null">
+                del_flag = #{delFlag},
+            </if>
+            <if test="thirdId != null and thirdId != ''">
+                third_id = #{thirdId},
+            </if>
+            <if test="thirdType != null and thirdType != ''">
+                third_type = #{thirdType},
+            </if>
+            <if test="activitiSync != null">
+                activiti_sync = #{activitiSync},
+            </if>
+            <if test="workNo != null and workNo != ''">
+                work_no = #{workNo},
+            </if>
+            <if test="post != null and post != ''">
+                post = #{post},
+            </if>
+            <if test="telephone != null and telephone != ''">
+                telephone = #{telephone},
+            </if>
+            <if test="createBy != null and createBy != ''">
+                create_by = #{createBy},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateBy != null and updateBy != ''">
+                update_by = #{updateBy},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="userIdentity != null">
+                user_identity = #{userIdentity},
+            </if>
+            <if test="departIds != null">
+                depart_ids = #{departIds},
+            </if>
+            <if test="relTenantIds != null and relTenantIds != ''">
+                rel_tenant_ids = #{relTenantIds},
+            </if>
+            <if test="clientId != null and clientId != ''">
+                client_id = #{clientId},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from jeecg-boot.sys_user where id = #{id}
+    </delete>
+
+</mapper>
