@@ -31,6 +31,9 @@ public class ThreadLocalTest {
 
     }
 
+
+
+
     public String date(int seconds){
         Date date = new Date(1000 * seconds);
         SimpleDateFormat dateFormat = ThreadSafeFormatter.dateFormatLocal.get();

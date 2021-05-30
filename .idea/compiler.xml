@@ -6,14 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="baizhi-spring5-01" />
         <module name="training-project" />
-        <module name="dataStructures-algorithms" />
         <module name="java-concurrency" />
+        <module name="dataStructures-algorithms" />
         <module name="itheima_spring" />
         <module name="java-base-common" />
-        <module name="design_patterns" />
         <module name="spring-demo" />
+        <module name="design_patterns" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +22,7 @@
       <module name="dataStructures-algorithms" target="8" />
       <module name="design_patterns" target="1.8" />
       <module name="itheima_spring" target="8" />
+      <module name="java-base" target="1.8" />
       <module name="java-base-common" target="8" />
       <module name="java-concurrency" target="8" />
       <module name="java-design-pattern" target="1.8" />
