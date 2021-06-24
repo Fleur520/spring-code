@@ -22,12 +22,14 @@ public class PrintABC {
 
     private static final int COUNT = 10;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // methodOne();
         // methodTwo();
         // methodThree();
         // methodFour();
-        methodFive();
+        // methodFive();
+         methodSix();
+
     }
 
     /**
@@ -132,6 +134,7 @@ public class PrintABC {
 
     /**
      * Semaphore 信号量方式
+     *
      */
     static void methodFour() {
         Semaphore A = new Semaphore(1);
@@ -213,11 +216,13 @@ public class PrintABC {
         Object todoA = new Object();
         Object todoB = new Object();
         Object todoC = new Object();
+
         for (int i = 0; i < NUM; i++) {
             wordList.add("A");
             wordList.add("B");
             wordList.add("C");
         }
+
         new Thread(new PrintWord("1", wordList, todoA, todoB)).start();
         new Thread(new PrintWord("1", wordList, todoB, todoC)).start();
         new Thread(new PrintWord("1", wordList, todoC ,todoA)).start();
@@ -226,6 +231,32 @@ public class PrintABC {
         }
 
     }
+
+
+    /**
+     * 使用synchronzied双重锁进行控制
+     */
+    static void methodSix() throws InterruptedException {
+
+        Object a = new Object();
+        Object b = new Object();
+        Object c = new Object();
+        ThreadPrinter pa = new ThreadPrinter("A",c,a);
+        ThreadPrinter pb = new ThreadPrinter("B",a,b);
+        ThreadPrinter pc = new ThreadPrinter("C",b,c);
+
+        new Thread(pa).start();
+        Thread.sleep(1000);
+        new Thread(pb).start();
+        Thread.sleep(1000);
+        new Thread(pc).start();
+
+    }
+
+
+
+
+
 }
 
 class PrintWord implements Runnable {
@@ -329,5 +360,42 @@ class ParkUnparkSupport {
             LockSupport.unpark(next);
 
         }
+    }
+}
+class ThreadPrinter implements Runnable{
+
+    private String name ;
+    private Object prev;
+    private Object self;
+    public ThreadPrinter(String name, Object prev, Object self) {
+        this.name = name;
+        this.prev = prev;
+        this.self = self;
+    }
+
+    @SneakyThrows
+    @Override
+    public void run() {
+        int count = 10 ;
+        while (count > 0) {
+            synchronized (prev) {
+                synchronized (self) {
+                    System.out.print(name);
+                    count--;
+                    self.notifyAll();
+                }
+                // 最后一次打印操作
+                if (count == 0) {
+                    // 通过notify 释放锁
+                    prev.notifyAll();
+
+                } else {
+                    prev.wait();
+                }
+            }
+
+        }
+
+
     }
 }

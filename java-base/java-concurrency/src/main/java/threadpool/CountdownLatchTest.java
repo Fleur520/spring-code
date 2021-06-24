@@ -22,15 +22,13 @@ public class CountdownLatchTest {
     public static void main(String[] args) throws InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(THREAD_NUM);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
+
         for (int i = 0; i < THREAD_NUM; i++){
             executorService.submit(new CountdownLatchTask(countDownLatch,"Thread-"+i));
-
         }
         countDownLatch.await();
         System.out.println("大家都执行完了 ，做总结工作");
         executorService.shutdown();
-
-
 
     }
 
