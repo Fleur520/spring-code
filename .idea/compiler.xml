@@ -11,6 +11,7 @@
         <module name="dataStructures-algorithms" />
         <module name="itheima_spring" />
         <module name="java-base-common" />
+        <module name="spring-boot-mybatis-xml-mulidatasource" />
         <module name="spring-demo" />
         <module name="design_patterns" />
       </profile>
@@ -27,8 +28,10 @@
       <module name="java-concurrency" target="8" />
       <module name="java-design-pattern" target="1.8" />
       <module name="java-project" target="1.8" />
+      <module name="spring-boot-mybatis-xml-mulidatasource" target="8" />
       <module name="spring-code" target="8" />
       <module name="spring-demo" target="8" />
+      <module name="spring-mybatis" target="8" />
       <module name="spring5-annotation" target="1.8" />
       <module name="training-project" target="8" />
     </bytecodeTargetLevel>
@@ -43,8 +46,10 @@
       <module name="itheima_spring" options="-parameters" />
       <module name="java-base-common" options="-parameters" />
       <module name="java-concurrency" options="-parameters" />
+      <module name="spring-boot-mybatis-xml-mulidatasource" options="-parameters" />
       <module name="spring-code" options="-parameters" />
       <module name="spring-demo" options="-parameters" />
+      <module name="spring-mybatis" options="-parameters" />
       <module name="spring5-annotation" options="" />
       <module name="training-project" options="-parameters" />
     </option>

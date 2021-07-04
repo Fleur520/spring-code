@@ -15,6 +15,7 @@
     <modules>
         <module>itheima_spring</module>
         <module>spring_demo</module>
+        <module>spring-boot-mybatis-xml-mulidatasource</module>
     </modules>
 
 
