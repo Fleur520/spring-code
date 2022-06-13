@@ -1,5 +1,3 @@
-
-
 spring:
   #数据库连接配置
   datasource:

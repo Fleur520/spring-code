@@ -48,7 +48,7 @@ public class ConditionDemo {
                 conditionDemo.method2();
             }
         }).start();
-        Thread.sleep(3000);
+        //Thread.sleep(3000);
 
         conditionDemo.method1();
     }

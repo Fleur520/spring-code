@@ -29,10 +29,12 @@ public class TestJDKProxy {
         InvocationHandler handler = new InvocationHandler(){
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                System.out.println("------proxy jdk befeore log --------");
+
+                System.out.println("------proxy jdk befeore log  --------");
                 //原始方法运行
 
                 Object ret = method.invoke(userService, args);
+
                 System.out.println("------proxy jdk after log --------");
 
 
@@ -42,8 +44,8 @@ public class TestJDKProxy {
 
         UserService userServiceProxy = (UserService)Proxy.newProxyInstance(UserServiceImpl.class.getClassLoader(),userService.getClass().getInterfaces(),handler);
 
-        userServiceProxy.login("suns", "123456");
-        userServiceProxy.register(new User());
+        userServiceProxy.login("zhangmin", "123456");
+        // userServiceProxy.register(new User());
 
     }
 }

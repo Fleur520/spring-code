@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  **/
 public class CountdownLatchTest {
 
-    private final static int THREAD_NUM =10;
+    private final static int THREAD_NUM =5;
 
     /**
      * 各个线程执行完成后，主线程做总结性工作的例子
@@ -23,15 +23,17 @@ public class CountdownLatchTest {
         CountDownLatch countDownLatch = new CountDownLatch(THREAD_NUM);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
 
-        for (int i = 0; i < THREAD_NUM; i++){
-            executorService.submit(new CountdownLatchTask(countDownLatch,"Thread-"+i));
+        for (int i = 0; i < 5; i++){
+            executorService.submit(new CountdownLatchTask(countDownLatch,"A"));
+            executorService.submit(new CountdownLatchTask(countDownLatch,"B"));
+            executorService.submit(new CountdownLatchTask(countDownLatch,"C"));
         }
         countDownLatch.await();
         System.out.println("大家都执行完了 ，做总结工作");
+
         executorService.shutdown();
 
     }
-
     static class CountdownLatchTask implements Runnable {
 
         private final CountDownLatch lock;
@@ -45,12 +47,9 @@ public class CountdownLatchTest {
 
         @Override
         public void run() {
-            System.out.println(threadName+"======= 执行成功=====");
+            System.out.print(threadName);
             lock.countDown();
 
         }
     }
-
-
-
 }

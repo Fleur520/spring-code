@@ -32,7 +32,9 @@ public class TestCglib {
             @Override
             public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
                 System.out.println("---cglib start log----");
+
                 Object ret = method.invoke(userService, args);
+
                 System.out.println("---cglib end log----");
                 return ret;
             }
@@ -42,7 +44,7 @@ public class TestCglib {
 
         UserService userServiceProxy = (UserService) enhancer.create();
 
-        userServiceProxy.login("suns", "123345");
-        userServiceProxy.register(new User());
+        userServiceProxy.login("zhang", "123345");
+        // userServiceProxy.register(new User());
     }
 }

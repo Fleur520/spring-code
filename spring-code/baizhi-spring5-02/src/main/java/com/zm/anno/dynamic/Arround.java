@@ -27,8 +27,7 @@ public class Arround implements MethodInterceptor {
     public Object invoke(MethodInvocation invocation) throws Throwable {
         System.out.println("------log-----");
         Object ret = invocation.proceed();
-
-
-        return false;
+        System.out.println("ret"+ ret);
+        return ret;
     }
 }

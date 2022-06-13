@@ -57,7 +57,8 @@ public class Phone {
         }
 
         //使用构建者创建Phone对象
-        public Phone build() {
+        public Phone build()
+        {
             return new Phone(this);
         }
     }

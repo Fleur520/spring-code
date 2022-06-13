@@ -7,6 +7,8 @@ package com.itheima.pattern.proxy.static_proxy;
  * @Author: 黑马程序员
  */
 public class Client {
+
+
     public static void main(String[] args) {
         //创建代售点类对象
         ProxyPoint proxyPoint = new ProxyPoint();

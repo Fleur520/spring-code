@@ -14,6 +14,7 @@ public class ProxyPoint implements SellTickets {
     public void sell() {
         System.out.println("代售点收取一些服务费用");
         trainStation.sell();
+        System.out.println(" 通知买票人");
     }
 
 }

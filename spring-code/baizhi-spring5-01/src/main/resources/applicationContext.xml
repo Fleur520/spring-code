@@ -98,13 +98,17 @@
         <constructor-arg type="int" >
             <value>37</value>
         </constructor-arg>
+        <constructor-arg name="name" >
+            <value>zm</value>
+        </constructor-arg>
+
     </bean>
 
         <bean id="conn" class="com.zm.anno.factorybean.ConnectionFactoryBean">
             <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
             <property name="url" value="jdbc:mysql://localhost:3306/jeecg-boot?useSSL=false"/>
             <property name="username" value="root"/>
-            <property name="password" value="123456"/>
+            <property name="password" value="zm123456"/>
         </bean>
 
     <!-- <bean id="connFactory" class="ConnectionFactory"></bean>
@@ -113,11 +117,14 @@
     <!--<bean id="conn" class="StaticConnectionFactory" factory-method="getConnection"/>
 -->
 
-    <bean id="account"   class="com.zm.anno.scope.Account"/>
+   <!-- <bean id="conn" class="com.zm.anno.factorybean.StaticConnectionFactory" factory-method="getConnection"/>-->
 
-    <bean id="product" scope="prototype" class="com.zm.anno.life.Product" init-method="myInit" destroy-method="myDestroy" >
-          <property name="name" value="suns"/>
-    </bean>
+   <bean id="account"   class="com.zm.anno.scope.Account"/>
+   <bean id="myProductPostProcessor"   class="com.zm.anno.beanpost.MyProductPostProcessor"/>
+
+   <bean id="product"  class="com.zm.anno.life.Product" init-method="myInit" destroy-method="myDestroy" >
+         <property name="name" value="suns"/>
+   </bean>
 
 
 

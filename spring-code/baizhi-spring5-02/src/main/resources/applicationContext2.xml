@@ -8,6 +8,9 @@
 
     <bean id="userService" class="com.zm.anno.aspect.UserServiceImpl"/>
 
+
+    <bean id="projectService" class="com.zm.anno.aspect.ProjectServiceImpl"/>
+
     <!--
        切面
          1. 额外功能
@@ -16,7 +19,7 @@
 
 
     -->
-    <bean id="arround" class="com.zm.anno.aspect.MyAspect"/>
+    <bean id="myAspect" class="com.zm.anno.aspect.MyAspect"/>
 
     <!--告知Spring基于注解进行AOP编程
     proxy-target-class="true"  cglib

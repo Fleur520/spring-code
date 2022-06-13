@@ -23,10 +23,6 @@ public class StaticConnectionFactory {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
         return conn;
-
     }
-
 }

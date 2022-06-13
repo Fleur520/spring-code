@@ -1,14 +1,16 @@
 package com.zm.anno.aop.controller;
 
-import com.zm.anno.aop.entity.SysUser;
-import com.zm.anno.aop.service.SysUserService;
-import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
+import com.zm.anno.aop.dao.SysUserDao;
+import com.zm.anno.aop.entity.SysUser;
+import com.zm.anno.aop.service.SysUserService;
+
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 用户表(SysUser)表控制层
@@ -24,8 +26,12 @@ public class SysUserController {
     /**
      * 服务对象
      */
-    @Resource
+    @Autowired
     private SysUserService sysUserService;
+
+
+    @Autowired(required = true)
+    private SysUserDao sysUserDao;
 
     /**
      * 通过主键查询单条数据
@@ -36,7 +42,8 @@ public class SysUserController {
     @GetMapping("selectOne")
     public SysUser selectOne(String id) {
         log.info("2222");
-        return this.sysUserService.queryById(id);
+        SysUser sysUser = sysUserDao.queryById(id);
+        return sysUser;
     }
 
 }

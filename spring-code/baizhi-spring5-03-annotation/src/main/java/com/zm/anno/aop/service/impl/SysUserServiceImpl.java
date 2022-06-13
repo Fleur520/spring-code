@@ -1,12 +1,11 @@
 package com.zm.anno.aop.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.zm.anno.aop.dao.SysUserDao;
 import com.zm.anno.aop.entity.SysUser;
 import com.zm.anno.aop.service.SysUserService;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 用户表(SysUser)表服务实现类
@@ -14,9 +13,10 @@ import java.util.List;
  * @author makejava
  * @since 2021-04-11 20:13:45
  */
-@Service("sysUserServiceImpl")
+@Service
 public class SysUserServiceImpl implements SysUserService {
-    @Resource
+
+    @Autowired(required = true)
     private SysUserDao sysUserDao;
 
     /**

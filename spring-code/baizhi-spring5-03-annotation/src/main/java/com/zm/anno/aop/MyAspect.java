@@ -15,9 +15,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 public class MyAspect {
 
 
-    @Around("execution (* login(..))")
+    @Around("execution (* *..SysUserDao.*(..))")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable{
-        System.out.println("aspectj  log ======");
+        System.out.println("aspectj  log zm ======");
 
         Object ret = joinPoint.proceed();
 

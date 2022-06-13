@@ -2,6 +2,7 @@ package com.jdk;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.function.Function;
 
 /**
  * @author minzhang
@@ -12,8 +13,10 @@ public class JDK18Test {
 
     public static void main(String[] args) {
 
-        dateApi();
-        lambdaTest();
+        //dateApi();
+        //lambdaTest();
+        function();
+
     }
 
 
@@ -30,4 +33,21 @@ public class JDK18Test {
         r2.run();
 
     }
+
+
+    static void function (){
+        String s = "1234";
+        change(s,(String str)->{
+            return Integer.parseInt(str);
+
+        });
+
+    }
+
+
+    public static void change(String s, Function<String,Integer> fun){
+        Integer i = fun.apply(s);
+        System.out.println(i);
+    }
+
 }

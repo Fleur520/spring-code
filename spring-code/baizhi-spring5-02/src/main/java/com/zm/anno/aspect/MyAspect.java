@@ -4,6 +4,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 
 
 /*
@@ -27,7 +28,9 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class MyAspect {
     @Pointcut("execution(* *..UserServiceImpl.*(..))")
-    public void myPointcut(){}
+    public void myPointcut(){
+
+    }
 
     @Around(value="myPointcut()")
     public Object arround(ProceedingJoinPoint joinPoint) throws Throwable {
@@ -35,8 +38,6 @@ public class MyAspect {
         System.out.println("----aspect log ------");
 
         Object ret = joinPoint.proceed();
-
-
         return ret;
     }
 

@@ -6,7 +6,7 @@ import com.zm.anno.proxy.User;
 public class UserServiceImpl implements UserService {
 
 
-    @Log
+    // @Log
     @Override
     public void register(User user) {
         System.out.println("UserServiceImpl.register 业务运算 + DAO ");

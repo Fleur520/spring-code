@@ -1,11 +1,11 @@
 package com.jdk;
 
-import org.junit.Test;
-
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class JDK18TestTest {
 
@@ -47,6 +47,17 @@ public class JDK18TestTest {
     public void test4() {
         ExecutorService executor = Executors.newFixedThreadPool(10);
         //Future< ? > future = executor.submit(() -> );
+
+    }
+
+
+    @Test
+    public void test5() {
+        Map<String, Integer> nameMap = new HashMap<>();
+        Integer value = nameMap.computeIfAbsent("name", s -> s.length());
+        System.out.println(nameMap);
+        System.out.println(value);
+
 
     }
 }

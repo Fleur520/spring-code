@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 import com.vo.Person;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author minzhang
@@ -15,13 +16,11 @@ public class ReflectTest {
 
     public static void main(String[] args) throws Exception {
 
-        getMethod();
-
-
-
     }
 
-    void getClassTest() throws ClassNotFoundException {
+
+    @Test
+    public void getClassTest() throws ClassNotFoundException {
 
         Class booletClass = boolean.class;
         System.out.println(booletClass);
@@ -41,7 +40,8 @@ public class ReflectTest {
     }
 
 
-    static void getMethod() throws Exception {
+    @Test
+    public  void getMethod() throws Exception {
 
         Class clazz = Class.forName("com.mysql.cj.jdbc.MysqlDataSource");
 

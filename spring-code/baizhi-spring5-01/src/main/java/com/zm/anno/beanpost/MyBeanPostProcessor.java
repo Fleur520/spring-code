@@ -21,7 +21,6 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
             Categroy categroy = (Categroy) bean;
             categroy.setName("xiaowb");
         }
-
         return bean;
     }
 }

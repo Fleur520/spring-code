@@ -28,7 +28,7 @@ public class UserController {
 	
     @RequestMapping("/getUser")
     public User getUser(Long id) {
-    	User user=user2Mapper.getOne(id);
+    	User user=user1Mapper.getOne(id);
         return user;
     }
     

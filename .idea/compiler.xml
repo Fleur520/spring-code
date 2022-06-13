@@ -7,10 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-sourcecode" />
+        <module name="baizhi-spring5-03-annotation" />
+        <module name="baizhi-spring5-02" />
+        <module name="baizhi-spring5-01" />
+        <module name="codes" />
         <module name="java-concurrency" />
         <module name="dataStructures-algorithms" />
         <module name="itheima_spring" />
+        <module name="mvc" />
         <module name="java-base-common" />
         <module name="spring-boot-mybatis-xml-mulidatasource" />
         <module name="spring-demo" />
@@ -21,6 +25,7 @@
       <module name="baizhi-spring5-01" target="1.8" />
       <module name="baizhi-spring5-02" target="1.8" />
       <module name="baizhi-spring5-03-annotation" target="1.8" />
+      <module name="codes" target="8" />
       <module name="dataStructures-algorithms" target="8" />
       <module name="design_patterns" target="1.8" />
       <module name="itheima_spring" target="8" />
@@ -30,6 +35,7 @@
       <module name="java-design-pattern" target="1.8" />
       <module name="java-project" target="1.8" />
       <module name="java-sourcecode" target="8" />
+      <module name="mvc" target="1.6" />
       <module name="spring-boot-mybatis-xml-mulidatasource" target="8" />
       <module name="spring-code" target="8" />
       <module name="spring-demo" target="8" />
@@ -43,12 +49,15 @@
       <module name="baizhi-spring5-01" options="-parameters" />
       <module name="baizhi-spring5-02" options="-parameters" />
       <module name="baizhi-spring5-03-annotation" options="-parameters" />
+      <module name="codes" options="-parameters" />
       <module name="dataStructures-algorithms" options="-parameters" />
       <module name="design_patterns" options="-parameters" />
       <module name="itheima_spring" options="-parameters" />
       <module name="java-base-common" options="-parameters" />
       <module name="java-concurrency" options="-parameters" />
+      <module name="java-project" options="-verbose -bootclasspath /Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/rt.jar" />
       <module name="java-sourcecode" options="-parameters" />
+      <module name="mvc" options="-verbose -bootclasspath /Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home/jre/lib/rt.jar" />
       <module name="spring-boot-mybatis-xml-mulidatasource" options="-parameters" />
       <module name="spring-code" options="-parameters" />
       <module name="spring-demo" options="-parameters" />

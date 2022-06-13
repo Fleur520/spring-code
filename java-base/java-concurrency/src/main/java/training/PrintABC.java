@@ -11,6 +11,7 @@ import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
 
 import lombok.SneakyThrows;
+import org.junit.jupiter.api.Test;
 
 /**
  * 迅雷笔试题）：编写一个程序，开启3个线程，这3个线程的ID分别为A、B、C，每个线程将自己的ID在屏幕上打印10遍，要求输出结果必须按ABC的顺序显示；如：ABCABC….依次递推。
@@ -22,53 +23,13 @@ public class PrintABC {
 
     private static final int COUNT = 10;
 
-    public static void main(String[] args) throws InterruptedException {
-        // methodOne();
-        // methodTwo();
-        // methodThree();
-        // methodFour();
-        // methodFive();
-         methodSix();
 
-    }
-
-    /**
-     * 使用固定容量线程数为一的线程池
-     */
-    static void methodOne() {
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Thread threadA = new Thread() {
-            @Override
-            public void run() {
-                super.run();
-                System.out.print("A");
-            }
-        };
-        Thread threadB = new Thread() {
-            @Override
-            public void run() {
-                System.out.print("B");
-            }
-        };
-        Thread threadC = new Thread() {
-            @Override
-            public void run() {
-                System.out.print("C");
-            }
-        };
-
-        for (int i = 0; i < COUNT; i++) {
-            executorService.submit(threadA);
-            executorService.submit(threadB);
-            executorService.submit(threadC);
-        }
-        executorService.shutdown();
-    }
 
     /**
      * 使用ReentrantLock实现,充分利用这个锁的特点----它的条件变量（休息室）可以有多个
      */
-    static void methodTwo() {
+    @Test
+    public  void methodTwo() {
 
         AwaitSignal awaitSignal = new AwaitSignal(10);
         // 创建三个休息室
@@ -109,7 +70,8 @@ public class PrintABC {
     /**
      * 使用park()和unpark()实现
      */
-    static void methodThree() {
+    @Test
+    public  void methodThree() {
 
         ParkUnparkSupport parkUnparkSupport = new ParkUnparkSupport(10);
 
@@ -136,7 +98,8 @@ public class PrintABC {
      * Semaphore 信号量方式
      *
      */
-    static void methodFour() {
+    @Test
+    public  void methodFour() {
         Semaphore A = new Semaphore(1);
         Semaphore B = new Semaphore(0);
         Semaphore C = new Semaphore(0);
@@ -210,7 +173,8 @@ public class PrintABC {
     /**
      * 使用队列 + synchronized锁
      */
-    static void methodFive() {
+    @Test
+    public  void methodFive() {
         final int NUM = 10;
         Queue wordList = new LinkedList<>();
         Object todoA = new Object();
@@ -236,7 +200,8 @@ public class PrintABC {
     /**
      * 使用synchronzied双重锁进行控制
      */
-    static void methodSix() throws InterruptedException {
+    @Test
+    public  void methodSix() throws InterruptedException {
 
         Object a = new Object();
         Object b = new Object();
@@ -362,6 +327,8 @@ class ParkUnparkSupport {
         }
     }
 }
+
+
 class ThreadPrinter implements Runnable{
 
     private String name ;
@@ -395,7 +362,5 @@ class ThreadPrinter implements Runnable{
             }
 
         }
-
-
     }
 }

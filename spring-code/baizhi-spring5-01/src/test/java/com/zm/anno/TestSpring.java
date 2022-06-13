@@ -10,7 +10,9 @@ import com.zm.anno.basic.UserService;
 import com.zm.anno.basic.constructer.Customer;
 import com.zm.anno.life.Product;
 import org.junit.Test;
+import org.springframework.aop.framework.ProxyFactoryBean;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.sql.Connection;
@@ -154,8 +156,6 @@ public class TestSpring {
        person.setName("suns");*/
 
        System.out.println("person = " + person);
-
-
    }
 
    /**
@@ -231,10 +231,11 @@ public class TestSpring {
    public void test12() {
        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
        Connection conn = (Connection) ctx.getBean("conn");
-       Connection conn2 = (Connection) ctx.getBean("conn");
-
+       ConnectionFactoryBean conn2 = (ConnectionFactoryBean) ctx.getBean("&conn");
+       Class<?> objectType = conn2.getObjectType();
        System.out.println("conn = " + conn);
-       System.out.println("conn = " + conn2);
+       System.out.println("conn2 = " + conn2);
+       System.out.println("conn2====objectType" + objectType);
    }
 
     /**
@@ -276,9 +277,14 @@ public class TestSpring {
      *  用于测试:生命周期
      */
     @Test
-    public void test16() {
+    public void testScope() {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext.xml");
         Product product = (Product) ctx.getBean("product");
+        //Product product2 = (Product) ctx.getBean("product");
+        System.out.println(product);
+        //System.out.println(product2);
+        //  scope="singleton" 为true
+        //System.out.println(product==product2);
         ctx.close();
     }
 
@@ -314,6 +320,49 @@ public class TestSpring {
         System.out.println("name = "+c.getName());
     }
 
+
+    @Test
+    public void test20() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("/applicationContext3.xml");
+
+        BeanFactory factory = (BeanFactory)ctx;
+
+        System.out.println(factory);
+    }
+
+
+    @Test
+    public void test21() {
+
+        AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext("com.zm");
+
+        //aop3  实际的spring使用aop的过程，配置好ProxyFactoryBean，给ProxyFactoryBean设置一个bean id
+        //然后通过ac.getBean(bean id),就取得被ProxyFactoryBean代理的对象，不是ProxyFactoryBean
+        //因为这个bean id虽然代表ProxyFactoryBean对象，直接getBean获取的是ProxyFactoryBean.getObject()返回的对象，即代理对象
+        //ac.getBean(&bean id),才能取得ProxyFactoryBean对象
+
+        ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
+        proxyFactoryBean.setBeanFactory(ac.getBeanFactory());
+        //aop拦截处理类
+        proxyFactoryBean.setInterceptorNames("myBeforeAop");
+        //代理的接口
+        proxyFactoryBean.setInterfaces(HelloInterface.class);
+        //被代理对象
+        proxyFactoryBean.setTarget(ac.getBean(HelloInterface.class));
+        //放入bean工厂，实际开发是在config下使用注解，设置多个proxyFactoryBean代理，设置不同bean id
+        ac.getBeanFactory().registerSingleton("myproxy",proxyFactoryBean);
+
+        HelloInterface accountProxy = (HelloInterface) ac.getBean("myproxy");
+        accountProxy.sayHello();
+
+        Object bean1 = ac.getBean("myproxy");
+        Object bean2 = ac.getBean("&myproxy");
+
+        System.out.println(bean1);
+        //获取直接的ProxyFactoryBean对象，加&
+        System.out.println(bean2);
+
+    }
 
 
 

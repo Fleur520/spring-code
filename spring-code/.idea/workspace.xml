@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a1d326e-9e75-4f88-ab58-0b9e1245e804" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../dataStructures-algorithms/dataStructures-algorithms.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-base/java-base-common/java-base-common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-base/java-base-common/src/test/java/com/jdk/JDK18TestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-base/java-base.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-base/java-concurrency/java-concurrency.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-design-pattern/design_patterns/design_patterns.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-design-pattern/java-design-pattern.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/itheima_spring/itheima_spring.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-mybatis-xml-mulidatasource/spring-boot-mybatis-xml-mulidatasource.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring_demo/spring-demo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../training-project/training-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-base/java-base-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java-base/java-base-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../training-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../training-project/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/training/Cyclic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-base/java-base-common/src/main/java/com/jdk/JDK18Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-base/java-base-common/src/main/java/com/jdk/JDK18Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/threadpool/CountdownLatchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/threadpool/CountdownLatchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/threadpool/ThreadLocalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/threadpool/ThreadLocalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/training/CyclicBarrierDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/training/CyclicBarrierDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/training/PrintABC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-base/java-concurrency/src/main/java/training/PrintABC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-design-pattern/design_patterns/src/main/java/com/itheima/pattern/builder/demo2/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-design-pattern/design_patterns/src/main/java/com/itheima/pattern/builder/demo2/Phone.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +64,7 @@
       <workItem from="1628855540793" duration="572000" />
       <workItem from="1629012977137" duration="347000" />
       <workItem from="1629818595047" duration="62000" />
+      <workItem from="1639827895174" duration="9000" />
     </task>
     <servers />
   </component>

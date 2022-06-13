@@ -15,6 +15,9 @@
     <modules>
         <module>itheima_spring</module>
         <module>spring_demo</module>
+        <module>baizhi-spring5-01</module>
+        <module>baizhi-spring5-02</module>
+        <module>baizhi-spring5-03-annotation</module>
         <module>spring-boot-mybatis-xml-mulidatasource</module>
     </modules>
 

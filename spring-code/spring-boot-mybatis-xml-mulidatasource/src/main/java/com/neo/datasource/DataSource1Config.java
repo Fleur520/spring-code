@@ -41,13 +41,13 @@ public class DataSource1Config {
     @Bean(name = "test1TransactionManager")
     @Primary
     public DataSourceTransactionManager testTransactionManager(@Qualifier("test1DataSource") DataSource dataSource) {
-        return new DataSourceTransactionManager(dataSource);
+         return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean(name = "test1SqlSessionTemplate")
     @Primary
     public SqlSessionTemplate testSqlSessionTemplate(@Qualifier("test1SqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
-        return new SqlSessionTemplate(sqlSessionFactory);
+         return new SqlSessionTemplate(sqlSessionFactory);
     }
 
 }
