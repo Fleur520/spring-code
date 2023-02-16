@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="maven-snapshots" />
+      <option name="name" value="maven-snapshots" />
+      <option name="url" value="http://nexus.gyuncai.cn/repository/maven-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="multicloud" />
+      <option name="name" value="multicloud" />
+      <option name="url" value="https://packages.glodon.com/artifactory/maven-multicloud-release/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="packages_cloudtsdk" />
+      <option name="name" value="maven-cloudt" />
+      <option name="url" value="https://packages.glodon.com/artifactory/maven-cloudtsdk-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="alimaven" />
+      <option name="name" value="maven-proxy-aliyun" />
+      <option name="url" value="http://packages.glodon.com/artifactory/maven-proxy-aliyun/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-releases" />
+      <option name="name" value="maven-releases" />
+      <option name="url" value="http://nexus.gyuncai.cn/repository/maven-releases/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-neutralcloud" />
+      <option name="name" value="maven-neutralcloud" />
+      <option name="url" value="http://packages.glodon.com/artifactory/maven-neutralcloud-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="packages_cloudt" />
+      <option name="name" value="maven-cloudt" />
+      <option name="url" value="http://packages.glodon.com/artifactory/maven-cloudt-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="gjc_repo" />
+      <option name="name" value="gjc_repo" />
+      <option name="url" value="http://nexus.gyuncai.cn/repository/gjc_repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven-proxy-repo1" />
+      <option name="name" value="maven-center" />
+      <option name="url" value="http://packages.glodon.com/artifactory/maven-proxy-repo1/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="snapshots" />
+      <option name="url" value="https://maven.aliyun.com/nexus/content/groups/public" />
+    </remote-repository>
+  </component>
+</project>

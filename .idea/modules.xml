@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-code/baizhi-spring5-01/baizhi-spring5-01.iml" filepath="$PROJECT_DIR$/spring-code/baizhi-spring5-01/baizhi-spring5-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-code/baizhi-spring5-02/baizhi-spring5-02.iml" filepath="$PROJECT_DIR$/spring-code/baizhi-spring5-02/baizhi-spring5-02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-code/baizhi-spring5-03-annotation/baizhi-spring5-03-annotation.iml" filepath="$PROJECT_DIR$/spring-code/baizhi-spring5-03-annotation/baizhi-spring5-03-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codes/codes.iml" filepath="$PROJECT_DIR$/codes/codes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dataStructures-algorithms/dataStructures-algorithms.iml" filepath="$PROJECT_DIR$/dataStructures-algorithms/dataStructures-algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-design-pattern/design_patterns/design_patterns.iml" filepath="$PROJECT_DIR$/java-design-pattern/design_patterns/design_patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-code/itheima_spring/itheima_spring.iml" filepath="$PROJECT_DIR$/spring-code/itheima_spring/itheima_spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-base/java-base.iml" filepath="$PROJECT_DIR$/java-base/java-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-base/java-base-common/java-base-common.iml" filepath="$PROJECT_DIR$/java-base/java-base-common/java-base-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-base/java-concurrency/java-concurrency.iml" filepath="$PROJECT_DIR$/java-base/java-concurrency/java-concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-design-pattern/java-design-pattern.iml" filepath="$PROJECT_DIR$/java-design-pattern/java-design-pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-project.iml" filepath="$PROJECT_DIR$/java-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/training-project/java-sourcecode/java-sourcecode.iml" filepath="$PROJECT_DIR$/training-project/java-sourcecode/java-sourcecode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-code/spring-boot-mybatis-xml-mulidatasource/spring-boot-mybatis-xml-mulidatasource.iml" filepath="$PROJECT_DIR$/spring-code/spring-boot-mybatis-xml-mulidatasource/spring-boot-mybatis-xml-mulidatasource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-code/spring-code.iml" filepath="$PROJECT_DIR$/spring-code/spring-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-code/spring_demo/spring-demo.iml" filepath="$PROJECT_DIR$/spring-code/spring_demo/spring-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/training-project/training-project.iml" filepath="$PROJECT_DIR$/training-project/training-project.iml" />
+    </modules>
+  </component>
+</project>
